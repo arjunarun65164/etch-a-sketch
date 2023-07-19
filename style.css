@@ -1,17 +1,29 @@
+:root{
+    --container_size:600px;
+}
 
 body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap:24px;
+    background-color: #eeeedd;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.items{
+    display:flex;
+    gap:150px;
 }
 
 .container{
     display:flex;
     flex-direction: column;
-    width: 960px;
-    height:960px;
-    border:8px #5c5c3d solid;
+    width: var(--container_size);
+    height:var(--container_size);
+    border:2px #5c5c3d solid;
+    box-shadow: 0 0 15px #b2b266;
 }
 
 .rowDiv{
@@ -20,9 +32,8 @@ body{
 }
 
 .columnDiv{
-    outline:1px grey solid;
     transition:250ms;
-    
+    background-color: white;
 }
 
 .hover{
@@ -32,12 +43,22 @@ body{
 .buttons{
     display:flex;
     justify-content: center;
-    gap:25%;
+    gap:24px;
+    flex-direction: column;
 }
 
 button{
-    padding:24px 12px;
-    font-size: 24px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: beige;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:12px 8px;
+    font-size: 18px;
+    background-color: #888844;
+    color:#f6f6ee;
+    border: 1px darkslategrey solid;
+    border-radius: 5px;
+    transition:250ms;
+}
+
+button:hover{
+    border-width:4px;
+
 }

@@ -1,1 +1,1 @@
-# etch-a-sketch
+Code for etch a sketch project from the odin project

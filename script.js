@@ -6,6 +6,10 @@ const container = document.querySelector(".container");
 
 
 function generateGrid(numSquares) {
+    let container_size = Number(getComputedStyle(document.body).getPropertyValue('--container_size').slice(0, -2))
+    //That makes the container width/height equal to the variable in css so that they match
+    //It removes the px at the end to convert it to a number
+
     for (let i = 0; i < numSquares; i++) {
         let div = document.createElement("div");
         div.classList.add("rowDiv")
@@ -13,8 +17,8 @@ function generateGrid(numSquares) {
         for (let j = 0; j < numSquares; j++) {
             let divIn = document.createElement("div");
             divIn.classList.add("columnDiv")
-            divIn.style.width = 960 / numSquares + "px";
-            divIn.style.height = 960 / numSquares + "px";
+            divIn.style.width = container_size / numSquares + "px";
+            divIn.style.height = container_size / numSquares + "px";
             div.append(divIn);
         }
     }
@@ -50,6 +54,7 @@ function emptyGrid(){
         return;
     })
 }
+
 
 //Generates the base 16x16 grid and checks for the change Squares button being clicked
 generateGrid(16);
